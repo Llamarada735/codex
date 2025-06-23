@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Subscription Metrics</title>
+  </head>
+  <body>
+    <h1>Subscription Metrics</h1>
+    <table border="1">
+      <tr><th>Credit Card</th><th>Monthly Total</th></tr>
+      {% for card, amount in totals.items() %}
+      <tr>
+        <td>{{ card }}</td>
+        <td>{{ amount }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <h2>Overall Monthly Total: {{ overall }}</h2>
+    <p><a href="{{ url_for('index') }}">Back to list</a></p>
+  </body>
+</html>
